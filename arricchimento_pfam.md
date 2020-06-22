@@ -11,7 +11,7 @@ hmmsearch --domtblout domains.tbl --cpu 16 ~/Shared/Databases/pfam/Pfam-A.hmm Sb
 attenzione che non ci siano coppie ripetute!
 
 ```
-sed 's/\s\{2,\}/\t/g' domains.tbl | grep -v ^# | cut -f1,3 | sort | uniq
+sed 's/\s\{2,\}/\t/g' domains.tbl | grep -v ^# | cut -f1,4 | sort | uniq
 ```
 
 ## 3. Test vero e proprio
