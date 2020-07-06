@@ -46,3 +46,11 @@ e se ci sono spazi nei nomi del fasta sono da troncare (sempre sed)
 grep PF18644.1 domains.tbl | sed 's/\s\{2,\}/\t/' | cut -f1 | sort | uniq | xargs -n 1 samtools faidx Achatina_immaculata_peptideset.fa
 ```
 
+# Arricchimento GO
+
+## Workflow
++ diamond blastp contro uniprot con soglia evalue 1e-5
++ estrazione di corrispondenza tra sequenza e uniprotID
++ estrazione di corrispondenza tra uniprotID e GO (con un GO e un uniprotID per riga! (gestionde id GO multipli))
++ associazione sequenza - GO
++ arricchimento
